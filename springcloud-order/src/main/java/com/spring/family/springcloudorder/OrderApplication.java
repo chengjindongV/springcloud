@@ -19,6 +19,11 @@ public class OrderApplication {
         SpringApplication.run(OrderApplication.class, args);
     }
 
+    /**
+     * 把restTemplet注册到spring容器
+     * @LoadBalanced就能让这个RestTemplate在请求时拥有客户端负载均衡的能力
+     * @return
+     */
     @Bean
     @LoadBalanced
     RestTemplate restTemplate() {
